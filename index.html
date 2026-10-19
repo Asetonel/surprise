@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f9e7ef">
+<meta name="robots" content="noindex, nofollow">
+<title>Кое-что для тебя ♡</title>
+<style>
+:root{--ink:#674453;--soft:#956c7d;--rose:#d66594;--line:rgba(255,255,255,.8)}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;min-height:100svh;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f9e7ef;background-image:radial-gradient(ellipse at 15% 10%,#fff8ec 0,transparent 47%),radial-gradient(ellipse at 85% 85%,#edceee 0,transparent 50%),linear-gradient(145deg,#f9e6ec,#f5e1ef);overflow-x:hidden}
+button{font:inherit;-webkit-tap-highlight-color:transparent}button:focus-visible{outline:3px solid #ab4777;outline-offset:6px}button{cursor:pointer}button:disabled{cursor:wait}button,.glass{touch-action:manipulation}
+.ambient{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}.orb{position:absolute;width:42vw;height:42vw;min-width:240px;min-height:240px;border-radius:50%;background:#efb5ce;filter:blur(65px);opacity:.25;animation:drift 16s ease-in-out infinite alternate}.orb.a{left:-12%;top:25%}.orb.b{right:-15%;bottom:-10%;background:#d7b3ed;animation-delay:-8s}
+.cloud{position:absolute;width:230px;height:67px;border-radius:100px;background:rgba(255,255,255,.5);filter:blur(1px);box-shadow:0 12px 45px rgba(219,164,189,.06);animation:float 11s ease-in-out infinite}.cloud:before,.cloud:after{content:"";position:absolute;border-radius:50%;background:inherit;bottom:18px}.cloud:before{width:100px;height:100px;left:35px}.cloud:after{width:75px;height:75px;right:28px}.c1{left:-60px;top:23%;transform:scale(.9)}.c2{right:-70px;top:57%;animation-delay:-4s}.c3{left:20%;bottom:-30px;opacity:.45;animation-delay:-7s}
+.spark{position:absolute;color:rgba(255,255,255,.95);font-size:24px;animation:twinkle 5s ease-in-out infinite}.s1{left:19%;top:17%}.s2{right:19%;top:32%;animation-delay:-2s}.s3{left:12%;bottom:23%;animation-delay:-3s}.s4{right:28%;bottom:13%;font-size:16px}
+main{position:relative;z-index:1;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:48px 20px 68px}
+.shell{width:100%;max-width:620px;text-align:center}.eyebrow{text-transform:uppercase;letter-spacing:.23em;font-size:10px;font-weight:650;color:var(--soft);margin:0 0 20px}.glass{position:relative;background:rgba(255,255,255,.48);border:1px solid var(--line);border-radius:36px;box-shadow:0 24px 80px rgba(145,83,116,.12),inset 0 1px 0 #fff,inset 0 -1px 0 rgba(255,255,255,.4);backdrop-filter:blur(25px) saturate(130%);-webkit-backdrop-filter:blur(25px) saturate(130%);padding:42px 32px 30px;overflow:hidden}.glass:before{content:"";position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,#fff,transparent)}
+.screen[hidden]{display:none!important}.screen.enter{animation:enter .65s cubic-bezier(.2,.7,.2,1) both}.screen.leaving{opacity:0;transform:translateY(-9px);transition:opacity .32s,transform .32s}
+h1,h2{font-weight:560;font-size:clamp(29px,5vw,40px);line-height:1.17;letter-spacing:-.045em;margin:24px 0 15px}p{line-height:1.75;font-size:15px;margin:0;color:var(--soft)}.sub{max-width:370px;margin:0 auto}.heart-wrap{width:110px;height:110px;margin:auto;display:grid;place-items:center;border:1px solid rgba(255,255,255,.9);border-radius:35px;background:linear-gradient(145deg,rgba(255,255,255,.85),rgba(255,220,235,.45));box-shadow:0 12px 35px rgba(211,123,163,.15),inset 0 1px 0 white;transform:rotate(-7deg)}.heart{width:63px;height:63px;filter:drop-shadow(0 7px 10px rgba(202,98,143,.23));animation:heartbeat 2.8s ease-in-out infinite}.heart-wrap svg{transform:rotate(7deg)}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:100px;min-height:52px;padding:14px 30px;border:1px solid rgba(255,255,255,.75);transition:transform .2s,box-shadow .2s;background:rgba(255,255,255,.65);color:var(--ink);font-size:15px;font-weight:600}.pill:hover{transform:translateY(-2px)}.primary{background:linear-gradient(135deg,#e38aaf,#cf6593);color:white;box-shadow:0 8px 24px rgba(202,98,143,.24),inset 0 1px 0 rgba(255,255,255,.5)}.yes{min-width:182px;margin-top:28px}.no-zone{position:relative;height:94px;max-width:390px;margin:12px auto 0}.no{position:absolute;left:calc(50% - 47px);top:7px;width:94px;min-height:42px;padding:10px 18px;font-size:13px;font-weight:500;color:#997b88;transition:left .18s ease,top .18s ease;background:rgba(255,255,255,.42)}.hint{font-size:11px;color:#ac8999;min-height:20px;letter-spacing:.015em}.footer{margin-top:20px;font-size:11px;color:#aa8295;letter-spacing:.04em}.mini{display:inline-block;padding:7px 12px;border:1px solid rgba(255,255,255,.8);border-radius:100px;background:rgba(255,255,255,.45);font-size:11px;letter-spacing:.06em;color:#ab728c}.video-title{font-size:clamp(27px,4.5vw,35px);margin-top:20px}.player{position:relative;margin:25px 0 15px;border-radius:23px;overflow:hidden;background:linear-gradient(145deg,#b18caa,#74556e);box-shadow:0 16px 35px rgba(104,64,91,.15);aspect-ratio:16/9;border:1px solid rgba(255,255,255,.8)}video{display:block;width:100%;height:100%;object-fit:contain;background:#31202d}.cover{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;background:radial-gradient(ellipse at 25% 0%,rgba(251,209,228,.8),transparent 70%),linear-gradient(135deg,#ad87a6,#775571);color:white}.cover[hidden]{display:none}.play{width:70px;height:70px;border-radius:50%;border:1px solid rgba(255,255,255,.7);background:rgba(255,255,255,.22);color:white;display:grid;place-items:center;box-shadow:0 6px 35px #6f456335,inset 0 1px 0 #ffffff66;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}.play svg{width:25px;height:25px;margin-left:4px}.cover span{font-size:12px;letter-spacing:.06em}.status{font-size:12px;min-height:22px}.error{padding:15px;margin-top:14px;border:1px solid #e9b8cb;border-radius:18px;background:#fff4f8;text-align:left;font-size:13px;color:#885567;line-height:1.7}.error[hidden]{display:none}.error button{margin-top:12px;font-size:12px;min-height:40px;padding:8px 17px}.gift{width:92px;height:92px;margin:0 auto 6px;display:grid;place-items:center;border:1px solid white;border-radius:30px;background:linear-gradient(135deg,#fff7fb,#f5d4e4);box-shadow:0 10px 30px #b3678c19;animation:float 6s ease-in-out infinite}.gift svg{width:49px;height:49px}.note{margin:26px auto 20px;padding:22px 20px;border-radius:24px;border:1px solid rgba(255,255,255,.9);background:rgba(255,255,255,.42);max-width:390px}.note p{font-size:16px;color:#85576e}.note small{display:block;margin-top:10px;color:#a57e90;font-size:12px;line-height:1.6}.link-button{background:none;border:0;color:#a87890;font-size:12px;padding:12px;text-decoration:underline;text-underline-offset:4px}.petal{position:fixed;z-index:5;pointer-events:none;top:-40px;color:#d87ca5;animation:fall 4s ease-in forwards}
+@keyframes heartbeat{0%,100%{transform:scale(1)}40%{transform:scale(1.09)}55%{transform:scale(1.03)}70%{transform:scale(1.08)}}@keyframes float{0%,100%{translate:0 0}50%{translate:0 -15px}}@keyframes drift{to{translate:45px -35px}}@keyframes twinkle{0%,100%{opacity:.3;scale:.8}50%{opacity:1;scale:1.1}}@keyframes enter{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}@keyframes fall{to{transform:translate(var(--drift),110vh) rotate(100deg);opacity:0}}
+@media(max-width:480px){main{padding:30px 16px 40px}.glass{padding:32px 19px 24px;border-radius:30px}.heart-wrap{width:95px;height:95px;border-radius:30px}.eyebrow{font-size:9px}.player{border-radius:18px}.sub{font-size:14px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.petal{display:none}}
+</style>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"><div class="orb a"></div><div class="orb b"></div><div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div><span class="spark s1">✧</span><span class="spark s2">✧</span><span class="spark s3">✦</span><span class="spark s4">✧</span></div>
+<main><div class="shell"><p class="eyebrow">Маленькое послание · только для тебя</p><div class="glass">
+<section id="question" class="screen enter" aria-labelledby="question-title">
+<div class="heart-wrap" aria-hidden="true"><svg class="heart" viewBox="0 0 80 80"><defs><linearGradient id="pink" x2=".8" y2="1"><stop stop-color="#f3adcb"/><stop offset="1" stop-color="#cf5f90"/></linearGradient></defs><path d="M40 69S8 49 8 27C8 9 30 6 40 23 50 6 72 9 72 27 72 49 40 69 40 69Z" fill="url(#pink)"/><path d="M18 27c0-7 7-10 12-7" fill="none" stroke="#ffe9f3" stroke-width="4" stroke-linecap="round" opacity=".75"/></svg></div>
+<h1 id="question-title" tabindex="-1">Ты меня любишь?</h1><p class="sub">У меня для тебя есть кое-что особенное.<br>Но сначала — один очень важный вопрос ♡</p>
+<button class="pill primary yes" id="yes">Да, очень ♡</button>
+<div class="no-zone" id="no-zone"><button class="pill no" id="no" aria-label="Нет — шуточная убегающая кнопка">Нет</button></div>
+<p class="hint" id="tease" aria-live="polite">Кажется, одна кнопочка немного стесняется…</p>
+</section>
+<section id="movie" class="screen" hidden aria-labelledby="movie-title"><span class="mini">Я так и знал ♡</span><h2 id="movie-title" class="video-title" tabindex="-1">Тогда этот момент —<br>для нас с тобой</h2><p class="sub">Есть вещи, которые красивее любых слов.<br>Побудь здесь со мной ещё чуть-чуть.</p>
+<div class="player"><video id="video" controls playsinline preload="metadata" aria-label="Наш маленький романтический момент"><source src="kiss.mp4" type="video/mp4">Твой браузер не поддерживает видео.</video><div class="cover" id="cover"><button id="play" class="play" aria-label="Включить видео"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 3.8c0-.8.9-1.3 1.6-.9l14 8.2c.7.4.7 1.4 0 1.8l-14 8.2c-.7.4-1.6-.1-1.6-.9Z"/></svg></button><span id="cover-text">Нажми — и начнётся маленькая история</span></div></div>
+<p class="status" id="status" aria-live="polite">Включи звук. Этот момент стоит услышать ♡</p>
+<div class="error" id="error" role="alert" hidden>Не получилось загрузить видео. Проверь интернет и попробуй ещё раз.<br><span id="error-detail"></span><br><button class="pill" id="retry">Попробовать ещё раз</button></div>
+</section>
+<section id="final" class="screen" hidden aria-labelledby="final-title"><div class="gift" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="#c16a91" stroke-width="2.4" stroke-linejoin="round"><rect x="11" y="27" width="42" height="28" rx="5" fill="#efb9d1"/><rect x="7" y="19" width="50" height="12" rx="4" fill="#fbd9e8"/><path d="M32 19v36M32 19C14 21 13 5 22 7c7 1 10 12 10 12Zm0 0C50 21 51 5 42 7c-7 1-10 12-10 12Z"/><path d="m23 38 9 7 9-7" opacity=".5"/></svg></div>
+<h2 id="final-title" tabindex="-1">А это ещё не всё…</h2><p class="sub">Самое нежное я всё равно скажу тебе лично.<br>А пока у меня остался один маленький секрет.</p><div class="note"><p>Твой главный подарочек<br>ждёт тебя в комоде ♡</p><small>Загляни туда. Я выбирал его с мыслями о тебе.</small></div><p class="hint">С любовью. И с очень счастливой улыбкой.</p><button id="replay" class="link-button">Посмотреть наш момент ещё раз</button></section>
+</div><p class="footer">Ты — моя самая любимая случайность ♡</p></div></main>
+<script>
+'use strict';
+const $ = id => document.getElementById(id);
+const video = $('video');
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let current = 'question', switching = false, dodges = 0;
+async function showScreen(id) {
+  if(switching || current === id) return;
+  switching = true;
+  const previous = $(current);
+  previous.classList.add('leaving');
+  await new Promise(resolve => setTimeout(resolve, reduced ? 0 : 330));
+  previous.hidden = true; previous.classList.remove('leaving','enter');
+  $(id).hidden = false; $(id).classList.add('enter'); current = id;
+  const heading = $(id).querySelector('h1,h2');
+  heading.focus({preventScroll:true});
+  switching = false;
+}
+function dodge(event) {
+  if(event) event.preventDefault();
+  const zone = $('no-zone'), btn = $('no');
+  const maxX = Math.max(0,zone.clientWidth-btn.offsetWidth);
+  const maxY = Math.max(0,zone.clientHeight-btn.offsetHeight);
+  const oldX = btn.offsetLeft, oldY = btn.offsetTop;
+  let x=0,y=0;
+  for(let i=0;i<12;i++) {x=Math.random()*maxX;y=Math.random()*maxY;if(Math.hypot(x-oldX,y-oldY)>85)break;}
+  btn.style.left=x+'px';btn.style.top=y+'px';
+  const messages=['Ой, убежала. Наверное, знает правильный ответ ♡','Кажется, сегодня она играет в прятки…','Ладно-ладно, не буду мешать кнопочке «Да» ♡'];
+  $('tease').textContent=messages[Math.min(dodges++,messages.length-1)];
+}
+$('no').addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')dodge(e)});
+$('no').addEventListener('pointerdown',dodge);
+$('no').addEventListener('click',dodge);
+function petals(){
+  if(reduced) return;
+  for(let i=0;i<16;i++){
+    const el=document.createElement('span');el.className='petal';el.textContent=i%3?'♡':'✧';
+    el.style.left=(Math.random()*100)+'vw';el.style.fontSize=(15+Math.random()*18)+'px';
+    el.style.animationDelay=(Math.random()*.7)+'s';el.style.setProperty('--drift',(Math.random()*120-60)+'px');
+    document.body.appendChild(el);setTimeout(()=>el.remove(),5000);
+  }
+}
+$('yes').addEventListener('click',()=>{if(switching)return;petals();video.preload='auto';showScreen('movie')});
+function showError(){
+  $('error').hidden=false;$('cover').hidden=false;$('play').disabled=false;
+  $('cover-text').textContent='Попробуем включить ещё раз?';
+  $('status').textContent='Видео пока не загрузилось';
+  $('error-detail').textContent='Если ты настраиваешь открытку: файл kiss.mp4 должен лежать рядом с index.html; формат — MP4 с H.264 и AAC.';
+}
+async function playVideo(){
+  $('error').hidden=true;$('status').textContent='Загружаем наш маленький момент…';
+  try {await video.play();$('cover').hidden=true;}
+  catch(err){if(err.name==='NotAllowedError'){$('status').textContent='Нажми ▶ на плеере, чтобы начать';$('cover').hidden=true;}else showError();}
+}
+$('play').addEventListener('click',playVideo);
+$('retry').addEventListener('click',()=>{video.load();playVideo()});
+video.addEventListener('error',()=>{if(current==='movie')showError()});
+video.querySelector('source').addEventListener('error',()=>{if(current==='movie')showError()});
+video.addEventListener('playing',()=>{$('cover').hidden=true;$('error').hidden=true;$('status').textContent='Просто ты, я и этот момент ♡'});
+video.addEventListener('waiting',()=>{if(current==='movie')$('status').textContent='Ещё секундочку — видео подгружается…'});
+video.addEventListener('pause',()=>{if(!video.ended&&current==='movie')$('status').textContent='Я подожду. Продолжай, когда захочешь ♡'});
+video.addEventListener('ended',async()=>{
+  try{if(document.fullscreenElement)await document.exitFullscreen();if(video.webkitDisplayingFullscreen&&video.webkitExitFullscreen)video.webkitExitFullscreen();}catch(e){}
+  await showScreen('final');petals();
+});
+$('replay').addEventListener('click',async()=>{
+  video.pause();video.currentTime=0;$('cover').hidden=false;$('cover-text').textContent='Ещё один маленький момент вместе';
+  $('status').textContent='Нажми ▶, чтобы посмотреть ещё раз';$('error').hidden=true;await showScreen('movie');
+});
+</script>
+</body>
+</html>
